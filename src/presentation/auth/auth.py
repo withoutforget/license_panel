@@ -1,3 +1,4 @@
+from src.application.services.auth import AuthService
 from src.application.utils.export import export
 from src.application.schemas.user import UserAuthSchema, UserRegisterSchema
 from src.usecase.auth.login import LoginUsecase
@@ -22,3 +23,9 @@ async def register(
     data: UserRegisterSchema, usecase: FromDishka[RegisterUsecase]
 ) -> None:
     await usecase(data)
+
+
+@export(routes)
+@post("/me/{token:str}")
+async def me(token: str, service: FromDishka[AuthService]) -> dict:
+    return await service.verify_token(token)

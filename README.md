@@ -1,9 +1,13 @@
-## License Panel
-REST-API реализующее backend системы лицензирования для проектов.
-### Стек технологий
-- Python 3.13
-- Litestar & SQLALchemy
-- Dishka & PostgreSQL 
+## License Panel 🚀
+
+<p align="center">REST-API реализующее backend системы лицензирования для проектов. </p>
+
+### 🛠 Стек технологий
+- **Python** 3.13
+- **Web Framework**: Litestar
+- **ORM**: SQLAlchemy
+- **DI**: Dishka
+- **Database**: PostgreSQL
 ### Зависимости для разработки
 - [direnv](https://direnv.net/) & [hook](https://direnv.net/docs/hook.html)
 - [just](https://github.com/casey/just)

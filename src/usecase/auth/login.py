@@ -21,7 +21,7 @@ class LoginUsecase:
                 item_id=user_schema.username, id_attribute="username"
             )
             verify_password = await self.auth_service.verify_password(
-                user_schema.password_hash, user.password_hash
+                user_schema.password, user.password_hash
             )
             if not verify_password:
                 raise BaseError(

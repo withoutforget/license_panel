@@ -13,7 +13,7 @@ class UserSchema(BaseModel):
 
 class UserAuthSchema(BaseModel):
     username: str
-    password_hash: str
+    password: str
 
 
 class UserRegisterSchema(BaseModel):
