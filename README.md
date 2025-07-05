@@ -2,6 +2,14 @@
 
 <p align="center">REST-API реализующее backend системы лицензирования для проектов. </p>
 
+<div align="center">
+
+[![Python 3.13](https://img.shields.io/badge/Python-3.13-blue.svg)](https://python.org)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Litestar](https://img.shields.io/badge/Framework-Litestar-blueviolet.svg)](https://litestar.dev)
+
+</div>
+
 ### 🛠 Стек технологий
 - **Python** 3.13
 - **Web Framework**: Litestar
@@ -9,7 +17,7 @@
 - **DI**: Dishka
 - **Database**: PostgreSQL
 ### Зависимости для разработки
-- [direnv](https://direnv.net/) & [hook](https://direnv.net/docs/hook.html)
+- [direnv](https://direnv.net/) + [shell hook](https://direnv.net/docs/hook.html)
 - [just](https://github.com/casey/just)
 
 ### Установка
