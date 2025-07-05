@@ -1,0 +1,27 @@
+[project]
+name = "license-panel"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "adaptix>=3.0.0b11",
+    "advanced-alchemy>=1.4.5",
+    "alembic>=1.16.2",
+    "bcrypt>=4.3.0",
+    "dishka>=1.6.0",
+    "dynaconf>=3.2.11",
+    "litestar>=2.16.0",
+    "pre-commit>=4.2.0",
+    "psycopg[binary]>=3.2.9",
+    "pydantic>=2.11.7",
+    "pyjwt>=2.10.1",
+    "ruff>=0.12.2",
+    "structlog>=25.4.0",
+    "uvicorn>=0.35.0",
+]
+
+[tool.ruff.lint]
+ignore = [
+    "F403"
+]

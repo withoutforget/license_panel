@@ -1,0 +1,38 @@
+services:
+  backend:
+    build:
+      context: ..
+      dockerfile: infra/Dockerfile
+      target: runner
+    environment:
+      CONFIG_FILE: "/etc/config.toml"
+      LP_ENV: "docker"
+    ports:
+      - "80:80"
+    volumes:
+      - ../src:/app/src:ro
+      - ../infra/config.toml:/etc/config.toml:ro
+    networks:
+      - net
+
+  postgres:
+    image: postgres:17-alpine
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: license_panel
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+    networks:
+      - net
+
+volumes:
+  postgres-data:
+    driver: local
+
+networks:
+  net:
+    driver: bridge

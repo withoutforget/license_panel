@@ -1,0 +1,27 @@
+[default]
+
+[default.api]
+host = "localhost"
+port = 80
+debug = false
+allow_origins = ["*"]
+allow_headers = ["*"]
+allow_methods = ["*"]
+allow_credentials = true
+
+[default.logging]
+level = "DEBUG"
+human_readable_logs = true
+
+
+[default.database]
+port = 5432
+username = "postgres"
+password = "postgres"
+database = "license_panel"
+host = "localhost"
+
+[docker]
+
+[docker.database]
+host = "postgres"
