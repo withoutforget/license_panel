@@ -1,7 +1,5 @@
 ## License Panel 🚀
 
-<p align="center">REST-API реализующее backend системы лицензирования для проектов. </p>
-
 <div align="center">
 
 [![Python 3.13](https://img.shields.io/badge/Python-3.13-blue.svg)](https://python.org)
@@ -10,10 +8,14 @@
 
 </div>
 
+___
+
+<p align="center">REST-API реализующее backend системы лицензирования для проектов. </p>
+
 ### 🛠 Стек технологий
 - **Python** 3.13
 - **Web Framework**: Litestar
-- **ORM**: SQLAlchemy
+- **ORM**: SQLAlchemy + Advanced Alchemy
 - **DI**: Dishka
 - **Database**: PostgreSQL
 ### Зависимости для разработки
