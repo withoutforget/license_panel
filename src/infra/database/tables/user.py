@@ -18,6 +18,9 @@ class User(base):
     )
     password_hash: Mapped[str] = mapped_column(String(length=512), nullable=False)
     is_banned: Mapped[bool] = mapped_column(Boolean(), default=False)
+    is_admin: Mapped[bool] = mapped_column(
+        Boolean(), default=False, server_default=text("false")
+    )
     created_at: Mapped[datetime] = mapped_column(
         DateTime(timezone=True), server_default=text("now()")
     )

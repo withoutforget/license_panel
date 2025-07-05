@@ -4,7 +4,7 @@ import structlog
 
 from src.application.errors import BaseError
 from src.infra.database.repository.user import UserRepository
-from src.presentation.auth.auth import AuthService
+from src.application.services.auth import AuthService
 from src.application.schemas.user import UserSchema
 
 logger = structlog.get_logger()

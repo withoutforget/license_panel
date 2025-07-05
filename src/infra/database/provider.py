@@ -10,6 +10,9 @@ from structlog import get_logger
 from typing import AsyncIterable
 
 
+from src.infra.database.repository.key import KeyRepository
+from src.infra.database.repository.product import ProductRepository
+from src.infra.database.repository.product_activation import ProductActivationRepository
 from src.infra.database.repository.user import UserRepository
 from src.infra.database.transaction_manager import SQLAlchemyTransactionManager
 from src.config import Config
@@ -45,5 +48,8 @@ class DatabaseProvider(Provider):
 
     _get_repository = provide_all(
         UserRepository,
+        ProductRepository,
+        KeyRepository,
+        ProductActivationRepository,
         scope=Scope.REQUEST,
     )

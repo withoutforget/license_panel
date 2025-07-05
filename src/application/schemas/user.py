@@ -8,6 +8,7 @@ class UserSchema(BaseModel):
     username: str
     password_hash: str
     is_banned: bool
+    is_admin: bool
     created_at: datetime
 
 

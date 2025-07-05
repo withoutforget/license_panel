@@ -11,7 +11,7 @@
 [doc("Создание миграций")]
 @m_make:
     uv run alchemy --config=src.infra.database.litestar_config.config make-migrations
-[doc("Дроп миграций")]
+[doc("Дроп миграций"), confirm("Вы уверены? Это удалит все данные из базы данных: ")]
 @m_drop:
     uv run alchemy --config=src.infra.database.litestar_config.config drop-all 
 [doc("Применение миграций")]
